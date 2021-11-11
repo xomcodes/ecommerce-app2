@@ -1,8 +1,11 @@
 import React from 'react'
 import Product from './Product'
+import {Row, Col, Container} from "react-bootstrap"
+import sofa1 from "../assets/sofa1.jpg"
+
 
 export default function Menu(props) {
-  const {products} = props
+  const {products, onAdd} = props
     return (
         <div>
           <h1 class="text-capitalize">
@@ -25,12 +28,27 @@ export default function Menu(props) {
         KITCHEN
       </a>
 
-<div class = "row">
-  {products.map((product) => (
-    <Product key ={product.id} product = {product}></Product>
-  ))}
 
-</div>
+       <Container>
+       <div className ="row justify-content-between align-items-center">
+  {products.map((product) => (
+    <Product key ={product.id} product = {product} onAdd = {onAdd}/>
+  ))}
+  </div>
+ 
+</Container> 
+
+
+
+
+
+{/* <div className ="row justify-content-between align-items-center">
+  {products.map((product) => (
+    <Product key ={product.id} product = {product} onAdd = {onAdd}/>
+  ))}
+  </div> */}
+
+
 
         </div>
 
