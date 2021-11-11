@@ -9,9 +9,6 @@
  import kitchen2 from "./assets/kitchen2.jpg"
  
 
-
-
-
  const data = {
      products: [
          {
